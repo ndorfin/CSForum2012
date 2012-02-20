@@ -1,0 +1,7 @@
+Built with love by:
+  @rianvdm      Rian van der Merwe (Product management / Project lead)
+  @kerry_anne   Kerry-Anne Gilowey (Content)
+                The crew from August Sun (Content)
+  @atheunissen  Anthony Theunissen (VizDesign)
+  @ndorfin      Shaun O'Connell (Front-end Dev)
+                Paul Gilowey (Operations)

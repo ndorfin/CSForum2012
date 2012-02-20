@@ -1,0 +1,74 @@
+@import "lib.less";
+
+@colour_bg_html: #f7f7f7;
+@colour_bg_body: #fff;
+@colour_font_default: #333;
+@colour_link:#3d6a82;
+@colour_link_visited:#3c93b8;
+@colour_link_hover:#78b7d6;
+@colour_link_active:blue;
+@colour_font_accent:#d7ddb5;
+@colour_nav_hover_bg:#8598a0;
+@colour_nav_active:#a4bfb3;
+@colour_page_heading_primary:#516b79;
+@colour_page_heading_secondary:#d7ddb5;
+@colour_section_heading_primary:#5e5e5e;
+@colour_section_heading_secondary:#a4bfb3;
+@colour_section_heading_tertiary:#84979f;
+@colour_subheading:#666;
+
+a {color:@colour_link;}
+a:visited {color:@colour_link_visited;}
+a:hover {color:@colour_link_hover; text-decoration:none;}
+a:active {color:@colour_link_active;}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {font:600 normal 13px/1.3 "Signika", Helvetica, Arial, sans-serif; color:@colour_subheading; margin:0 0 0.5em 0;}
+
+img {max-width:100%; vertical-align:bottom; -ms-interpolation-mode:bicubic;}
+
+nav {.stripped();
+	> menu {.stripped_nav();
+		> li {.stripped_nav();
+			> a {}
+			> a:hover {text-decoration:none;}
+		}
+	}
+}
+
+article h1 {font-size:32px; color:@colour_page_heading_primary;}
+article h1.secondary {color:@colour_page_heading_secondary;}
+article h2 {font-size:20px; color:@colour_section_heading_primary;}
+article h2.secondary {color:@colour_section_heading_secondary;}
+article h2.tertiary {color:@colour_section_heading_tertiary;}
+article h3 {font-size:16px;}
+article h4 {font-size:14px;}
+article h4,
+article h5,
+article h6 {text-transform:uppercase;}
+
+article p {font-size:12px;}
+	article p big {font-size:14px;}
+	article p small {font-size:10px;}
+
+article blockquote {font:normal normal 16px/1.5 Georgia, "Times new roman", serif; quotes:'“' '”' '“' '”'; margin:0 0 .5em 0;
+	> p {font-size:16px;
+		&::before {content:'“';}
+		&::after {content:'”';}
+		&::before,
+		&::after {font-size:48px; color:#bbb; line-height:0; position:relative; bottom:-24px;}
+	}
+	> p.author {color:#999; font-size:12px; font-style:italic;
+		&::before,
+		&::after {content:""; content:none;}
+	}
+	&.pullquote {float:left; width:30%; margin:0 2em 2em 2em;
+		p {margin-top:0;}
+	}
+}
+
+ul {list-style-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAICAYAAAA1BOUGAAAATUlEQVR42oWPsQ0AIAgEWYEVHM4VnIUV3MANLGwtnUWBYDRRY3Eh91cBqWYBGc8Eu7rPUJg+MUeJpMMJwZKTb4yPGCU6pu3B3F1fMYcByoypqjBGQiYAAAAASUVORK5CYII="); *list-style-image:url("img/bg_bullet.png")}

@@ -1,0 +1,29 @@
+// Oldish markup technique for hiding an element off the left of the screen.
+.off-left() {position:absolute; left:-9999em;}
+
+// Negative text-indent to hide an element's text contents
+.hide_text() {text-indent:-9999em;}
+
+// Recalculates the sizing on a block by including borders and padding in the dimensions.
+.box() {-moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box;}
+
+// Dimension setting short-cuts
+.size(@width:16px, @height:16px) {width:@width; height:@height;}
+	.square(@length:16px) {.size(@length, @length);}
+
+// Set this on a parent container so that it grows to encompass any overflowing floats
+.float-fix(){overflow:hidden;}
+
+// Strip margins and padding
+.stripped(){margin:0; padding:0;}
+	// Remove list-styles, margins and padding from a nav-oriented list element
+	.stripped_nav(){list-style:none; .stripped();}
+
+// Box Shadows
+.box_shadow(@shadow:0 1px 3px rgba(0,0,0,.25)) {-webkit-box-shadow:@shadow; -moz-box-shadow:@shadow; box-shadow:@shadow;}
+
+// Animation transitions
+.transition(@transition) {-webkit-transition:@transition; -moz-transition:@transition; -ms-transition:@transition; -o-transition:@transition; transition:@transition;}
+
+// Opacity
+.opacity(@opacity:0.8) {-moz-opacity:0.8; opacity:0.8;}
