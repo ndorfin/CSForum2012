@@ -1,0 +1,11 @@
+CACHE MANIFEST
+
+CACHE:
+index.html
+static/css/cs_forum.css
+
+NETWORK:
+*
+
+FALLBACK:
+/ /index.html
