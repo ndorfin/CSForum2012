@@ -1,0 +1,18 @@
+@import "lib.less";
+
+/* Buttons */
+.button {display:inline-block; padding:5px 10px; border:none; font-size:18px; .border-radius(5px); .box-shadow(1px 1px 3px, 0.5); .box-sizing(border-box); line-height:1.3;}
+
+.button.primary {color:#fff; font-size:18px; text-shadow:1px 1px rgba(0,0,0,.5); background-color:#748991; .linear-gradient(#83979f, #63777f);}
+.button.primary:hover {color:#fff; text-shadow:1px 1px rgba(0,0,0,.5); background-color:#6ea9c7; .linear-gradient(#85bad3, #579abc);}
+.button.primary:active {.no-linear-gradient(); .no-box-shadow();}
+
+.button.secondary {background-color:#e2e2e2; color:#5e5e5e; .linear-gradient(#f4f4f4, #cdcdcd);}
+.button.secondary:hover {color:#657981;}
+.button.secondary:active {.no-linear-gradient(); .no-box-shadow();}
+
+a.button:link,
+a.button:visited,
+a.button:hover {text-decoration:none;}
+input.button,
+button.button {overflow:visible; margin:0;}

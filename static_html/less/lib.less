@@ -1,3 +1,21 @@
+@colour_bg_html: #f7f7f7;
+@colour_bg_body: #fff;
+@colour_font_default: #333;
+@colour_link:#3d6a82;
+@colour_link_visited:#3c93b8;
+@colour_link_hover:#78b7d6;
+@colour_link_active:blue;
+@colour_font_accent:#d7ddb5;
+@colour_nav_hover_bg:#8598a0;
+@colour_nav_active:#a4bfb3;
+@colour_page_heading_primary:#516b79;
+@colour_page_heading_secondary:#d7ddb5;
+@colour_section_heading_primary:#5e5e5e;
+@colour_section_heading_secondary:#a4bfb3;
+@colour_section_heading_tertiary:#84979f;
+@colour_subheading:#666;
+
+
 // Oldish markup technique for hiding an element off the left of the screen.
 .off-left() {position:absolute; left:-9999em;}
 
@@ -9,7 +27,7 @@
 
 // Dimension setting short-cuts
 .size(@width:16px, @height:16px) {width:@width; height:@height;}
-	.square(@length:16px) {.size(@length, @length);}
+.square(@length:16px) {.size(@length, @length);}
 
 // Set this on a parent container so that it grows to encompass any overflowing floats
 .float-fix(){overflow:hidden;}
@@ -17,13 +35,62 @@
 // Strip margins and padding
 .stripped(){margin:0; padding:0;}
 	// Remove list-styles, margins and padding from a nav-oriented list element
-	.stripped_nav(){list-style:none; .stripped();}
+	.stripped_list(){list-style:none; .stripped();}
+
+// Box sizing
+.box-sizing(@value:border-box){
+	-webkit-box-sizing:@value;
+	-moz-box-sizing:@value;
+	box-sizing:@value;
+}
+	
+// Border radius
+.border-radius(@radius:5px) {
+	-o-border-radius:@radius;
+	-moz-border-radius:@radius;
+	-webkit-border-radius:@radius;
+	border-radius:@radius;
+}
 
 // Box Shadows
-.box_shadow(@shadow:0 1px 3px rgba(0,0,0,.25)) {-webkit-box-shadow:@shadow; -moz-box-shadow:@shadow; box-shadow:@shadow;}
+.box-shadow(@style, @c) when (iscolor(@c)) {
+	-webkit-box-shadow:@style @c;
+	-moz-box-shadow:@style @c;
+	box-shadow:@style @c;
+}
+.box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {
+	.box-shadow(@style, rgba(0, 0, 0, @alpha));
+}
+.no-box-shadow(@none:none){
+	-webkit-box-shadow:@none;
+	-moz-box-shadow:@none;
+	box-shadow:@none;
+}
+
+// Linear Gradients
+.linear-gradient(@start:#fff, @end:#000) when not (isempty(@end)){
+	background-image:-webkit-gradient(linear, left top, left bottom, from(@start), to(@end));
+	background-image:-webkit-linear-gradient(top, @start, @end);
+	background-image:-moz-linear-gradient(top, @start, @end);
+	background-image:-ms-linear-gradient(top, @start, @end);
+	background-image:-o-linear-gradient(top, @start, @end);
+	background-image:linear-gradient(to bottom, @start, @end);
+}
+.no-linear-gradient(@none:none){
+	background-image:none;
+}
 
 // Animation transitions
-.transition(@transition) {-webkit-transition:@transition; -moz-transition:@transition; -ms-transition:@transition; -o-transition:@transition; transition:@transition;}
+.transition(@transition) {
+	-webkit-transition:@transition;
+	-moz-transition:@transition;
+	-ms-transition:@transition;
+	-o-transition:@transition;
+	transition:@transition;
+}
 
 // Opacity
-.opacity(@opacity:0.8) {-moz-opacity:0.8; opacity:0.8;}
+.opacity(@opacity_decimal:0.8) {
+	-moz-opacity:@opacity_decimal;
+	opacity:@opacity_decimal;
+}

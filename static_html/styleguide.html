@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" manifest="appcache.mf">
+<!--html lang="en" manifest="appcache.mf"-->
+<html lang="en">
 	<meta charset="utf-8">
 	<title>Content Strategy Forum 2012. Cape Town, South Africa</title>
 	<link rel="stylesheet" href="static/css/cs_forum.css">
@@ -8,8 +9,12 @@
 	<![endif]-->
 	<link href="http://fonts.googleapis.com/css?family=Signika:400,600" rel="stylesheet">
 	<style>
+		/* This style block is for the styleguide page only and strictly for debugging purposes only */
 		article code {background-color:#fdc; color:#333; display:none; padding:0 0.5em; font-size:10px; text-transform:none;}
 		article *:hover > code {display:inline-block;}
+		section.debug {padding-bottom:20px;}
+			.debug .debug_heading {background-color:#E9E7E8; color:#333; margin:0 -20px 10px; padding:10px 10px 10px 20px; font-size:20px; text-transform:uppercase; letter-spacing:0.1em}
+			.debug:first-child .debug_heading {margin-top:-20px;}
 	</style>
 	<body>
 		<header>
@@ -38,69 +43,93 @@
 			</nav>
 		</header>
 		<article>
-			<h1>Page heading (Primary)<code>&lt;h1&gt;</code></h1>
-			<h1 class="secondary">Page heading (Secondary)<code>&lt;h1 class="secondary"&gt;</code></h1>
-			<h2>Section heading (Primary)<code>&lt;h2&gt;</code></h2>
-			<h2 class="secondary">Section heading (Secondary)<code>&lt;h2 class="secondary"&gt;</code></h2>
-			<h2 class="tertiary">Section heading (Tertiary)<code>&lt;h2 class="tertiary"&gt;</code></h2>
-			<h3>Subheading level 1<code>&lt;h3&gt;</code></h3>
-			<h4>Subheading level 2<code>&lt;h4&gt;</code></h4>
-			<h5>Subheading level 3<code>&lt;h5&gt;</code></h5>
-			<h6>Subheading level 4<code>&lt;h6&gt;</code></h6>
-			<p class="intro">Introductory text.<code>&lt;p class="intro"&gt;</code></p>
-			<p><big>Big paragraph text.<code>&lt;p&gt;&lt;big&gt;</code></big></p>
-			<p>
-				Default paragraph text with: inline breaks,<code>&lt;br&gt;</code><br>
-				<strong>strong emphasis<code>&lt;strong&gt;</code></strong>, and <b>bold<code>&lt;b&gt;</code></b>,<code>&lt;br&gt;</code><br>
-				<em>emphasis<code>&lt;em&gt;</code></em> and <i>italics<code>&lt;i&gt;</code></i>,<code>&lt;br&gt;</code><br>
-				<u>underlining<code>&lt;u&gt;</code></u>, <s>strikethroughs<code>&lt;s&gt;</code></s> and <mark>highlighting<code>&lt;mark&gt;</code></mark>,<code>&lt;br&gt;</code><br>
-				<ins>insertions<code>&lt;ins&gt;</code></ins> and <del>deletions<code>&lt;del&gt;</code></del>,<code>&lt;br&gt;</code><br>
-				<a href="index.html">links<code>&lt;a href="URL"&gt;</code></a> and&hellip;<code>&lt;br&gt;</code><br>
-				<strong>any <del>such</del> <em>manner</em></strong> <u>of <mark>combinations</mark></u>.<code>&lt;br&gt;</code><br>
-				<code>&lt;p&gt;</code>
-			</p>
-			<p><small>Small paragraph text.<code>&lt;p&gt;&lt;small&gt;</code></small></p>
-			<p>An unordered list:<code>&lt;ul&gt;</code></p>
-			<ul>
-				<li>List item<code>&lt;li&gt;</code></li>
-				<li>List item<code>&lt;li&gt;</code></li>
-				<li>List item<code>&lt;li&gt;</code></li>
-				<li>In October 2012, the international content strategy conference will be packing its bags and heading south, for a glorious summer holiday in one of the most beautiful cities in the world: Cape Town, South Africa.watch videos and listen to recordings of the presentations on the schedule page.<code>&lt;li&gt;</code></li>
-				<li>List item<code>&lt;li&gt;</code></li>
-			</ul>
-			<p>An ordered list: <code>&lt;ol&gt;</code></p>
-			<ol>
-				<li>List item <code>&lt;li&gt;</code></li>
-				<li>List item <code>&lt;li&gt;</code></li>
-				<li>List item <code>&lt;li&gt;</code></li>
-				<li>In October 2012, the international content strategy conference will be packing its bags and heading south, for a glorious summer holiday in one of the most beautiful cities in the world: Cape Town, South Africa.watch videos and listen to recordings of the presentations on the schedule page. <code>&lt;li&gt;</code></li>
-				<li>List item <code>&lt;li&gt;</code></li>
-			</ol>
-			<p>A definition list: <code>&lt;dl&gt;</code></p>
-			<dl>
-				<dt>Definition term <code>&lt;dt&gt;</code></dt>
-				<dd>Definition description <code>&lt;dd&gt;</code></dd>
-				<dt>Definition term <code>&lt;dt&gt;</code></dt>
-				<dd>Definition description <code>&lt;dd&gt;</code></dd>
-				<dd>Alternative definition description <code>&lt;dd&gt;</code></dd>
-			</dl>
-			<blockquote>
+			<section class="debug">
+				<nav class="bookmarks">
+					<menu>
+						<li><a href="j2_headings">Headings</a></li>
+						<li><a href="j2_text">Text treatment</a></li>
+						<li><a href="j2_lists">Lists</a></li>
+						<li><a href="j2_quotes">Quotes</a></li>
+						<li><a href="j2_buttons">Buttons</a></li>
+						<li><a href="j2_forms">Forms</a></li>
+						<!--li><a href="j2_"></a></li-->
+					</menu>
+				</nav>
+				<ul>
+			</section>
+			<section id="j2_headings" class="debug">
+				<h1 class="debug_heading">Headings</h1>
+				<h1>Page heading (Primary)<code>&lt;h1&gt;</code></h1>
+				<h1 class="secondary">Page heading (Secondary)<code>&lt;h1 class="secondary"&gt;</code></h1>
+				<h2>Section heading (Primary)<code>&lt;h2&gt;</code></h2>
+				<h2 class="secondary">Section heading (Secondary)<code>&lt;h2 class="secondary"&gt;</code></h2>
+				<h2 class="tertiary">Section heading (Tertiary)<code>&lt;h2 class="tertiary"&gt;</code></h2>
+				<h3>Subheading level 1<code>&lt;h3&gt;</code></h3>
+				<h4>Subheading level 2<code>&lt;h4&gt;</code></h4>
+				<h5>Subheading level 3<code>&lt;h5&gt;</code></h5>
+				<h6>Subheading level 4<code>&lt;h6&gt;</code></h6>
+			</section>
+			<section id="j2_text" class="debug">
+				<h1 class="debug_heading">Text treatment</h1>
+				<p class="intro">Introductory text.<code>&lt;p class="intro"&gt;</code></p>
+				<p><big>Big paragraph text.<code>&lt;p&gt;&lt;big&gt;</code></big></p>
 				<p>
-					When I walk beside her<br>
-					I am the better man.<br>
-					When I look to leave her<br>
-					I always stagger back again
+					Default paragraph text with: inline breaks,<code>&lt;br&gt;</code><br>
+					<strong>strong emphasis<code>&lt;strong&gt;</code></strong>, and <b>bold<code>&lt;b&gt;</code></b>,<code>&lt;br&gt;</code><br>
+					<em>emphasis<code>&lt;em&gt;</code></em> and <i>italics<code>&lt;i&gt;</code></i>,<code>&lt;br&gt;</code><br>
+					<u>underlining<code>&lt;u&gt;</code></u>, <s>strikethroughs<code>&lt;s&gt;</code></s> and <mark>highlighting<code>&lt;mark&gt;</code></mark>,<code>&lt;br&gt;</code><br>
+					<ins>insertions<code>&lt;ins&gt;</code></ins> and <del>deletions<code>&lt;del&gt;</code></del>,<code>&lt;br&gt;</code><br>
+					<a href="index.html">links<code>&lt;a href="URL"&gt;</code></a> and&hellip;<code>&lt;br&gt;</code><br>
+					<strong>any <del>such</del> <em>manner</em></strong> <u>of <mark>combinations</mark></u>.<code>&lt;br&gt;</code><br>
+					<code>&lt;p&gt;</code>
 				</p>
-				<p>
-					Once I built an ivory tower<br>
-					so I could worship from above<br>
-					and when I climbed down to be set free<br>
-					she took me in again
-				</p>
-				<p class="author">- Eddie Vedder, <a href="http://www.youtube.com/watch?v=jpkeJWXY4ZA">Hard Sun</a><code>&lt;p class="author"&gt;</code></p>
-				<code>&lt;blockquote&gt;</code>
-			</blockquote>
-			<section>
+				<p><small>Small paragraph text.<code>&lt;p&gt;&lt;small&gt;</code></small></p>
+			</section>
+			<section id="j2_lists" class="debug">
+				<h1 class="debug_heading">Lists</h1>
+				<p>An unordered list:<code>&lt;ul&gt;</code></p>
+				<ul>
+					<li>List item<code>&lt;li&gt;</code></li>
+					<li>List item<code>&lt;li&gt;</code></li>
+					<li>List item<code>&lt;li&gt;</code></li>
+					<li>In October 2012, the international content strategy conference will be packing its bags and heading south, for a glorious summer holiday in one of the most beautiful cities in the world: Cape Town, South Africa.watch videos and listen to recordings of the presentations on the schedule page.<code>&lt;li&gt;</code></li>
+					<li>List item<code>&lt;li&gt;</code></li>
+				</ul>
+				<p>An ordered list: <code>&lt;ol&gt;</code></p>
+				<ol>
+					<li>List item <code>&lt;li&gt;</code></li>
+					<li>List item <code>&lt;li&gt;</code></li>
+					<li>List item <code>&lt;li&gt;</code></li>
+					<li>In October 2012, the international content strategy conference will be packing its bags and heading south, for a glorious summer holiday in one of the most beautiful cities in the world: Cape Town, South Africa.watch videos and listen to recordings of the presentations on the schedule page. <code>&lt;li&gt;</code></li>
+					<li>List item <code>&lt;li&gt;</code></li>
+				</ol>
+				<p>A definition list: <code>&lt;dl&gt;</code></p>
+				<dl>
+					<dt>Definition term <code>&lt;dt&gt;</code></dt>
+					<dd>Definition description <code>&lt;dd&gt;</code></dd>
+					<dt>Definition term <code>&lt;dt&gt;</code></dt>
+					<dd>Definition description <code>&lt;dd&gt;</code></dd>
+					<dd>Alternative definition description <code>&lt;dd&gt;</code></dd>
+				</dl>
+			</section>
+			<section id="j2_quotes" class="debug">
+				<h1 class="debug_heading">Quotes</h1>
+				<blockquote>
+					<p>
+						When I walk beside her<br>
+						I am the better man.<br>
+						When I look to leave her<br>
+						I always stagger back again
+					</p>
+					<p>
+						Once I built an ivory tower<br>
+						so I could worship from above<br>
+						and when I climbed down to be set free<br>
+						she took me in again
+					</p>
+					<p class="author">- Eddie Vedder, <a href="http://www.youtube.com/watch?v=jpkeJWXY4ZA">Hard Sun</a><code>&lt;p class="author"&gt;</code></p>
+					<code>&lt;blockquote&gt;</code>
+				</blockquote>
 				<p>In October 2012, the international content strategy conference will be packing its bags and heading south, for a glorious summer holiday in one of the most beautiful cities in the world: Cape Town, South Africa. Watch videos and listen to recordings of the presentations on the schedule page.</p>
 				<blockquote class="pullquote">
 					<p>
@@ -109,4 +138,94 @@
 					<code>&lt;blockquote class="pullquote"&gt;</code>
 				</blockquote>
 				<p>In October 2012, the international content strategy conference will be packing its bags and heading south, for a glorious summer holiday in one of the most beautiful cities in the world: Cape Town, South Africa.watch videos and listen to recordings of the presentations on the schedule page.</p>
+				<p>In October 2012, the international content strategy conference will be packing its bags and heading south, for a glorious summer holiday in one of the most beautiful cities in the world: Cape Town, South Africa.watch videos and listen to recordings of the presentations on the schedule page.</p>
+			</section>
+			<section id="j2_buttons" class="debug">
+				<h1 class="debug_heading">Buttons</h1>
+				<table>
+					<thead>
+						<tr>
+							<th></th>
+							<th>Primary</th>
+							<th>Secondary</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>Anchors</th>
+							<td><a href="#" class="button primary">Press me!</a></td>
+							<td><a href="#" class="button secondary">Press me!</a></td>
+						</tr>
+						<tr>
+							<th>Inputs</th>
+							<td><input type="submit" class="button primary" value="Press me!"></td>
+							<td><input type="submit" class="button secondary" value="Press me!"></td>
+						</tr>
+						<tr>
+							<th>Buttons</th>
+							<td><button type="submit" class="button primary">Press me!</button></td>
+							<td><button type="submit" class="button secondary">Press me!</button></td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+			<section id="j2_forms" class="debug">
+				<h1 class="debug_heading">Forms and form-fields</h1>
+				<form action="#form" method="post">
+					<div class="form_row">
+						<label for="inp_text">Text</label>
+						<input type="text" name="text" id="inp_text" placeholder="Text">
+					</div>
+					<div class="form_row">
+						<label for="inp_email">E-mail</label>
+						<input type="email" name="email" id="inp_email" placeholder="E-mail">
+					</div>
+					<div class="form_row">
+						<label for="inp_url">URL</label>
+						<div class="field">
+							<input type="url" name="url" id="inp_url" placeholder="URL">
+							<em class="helper">e.g. http://www.domain.com</em>
+						</div>
+					</div>
+					<div class="form_row">
+						<label for="inp_tel">Telephone</label>
+						<div class="field">
+							<input type="tel" name="tel" id="inp_tel" placeholder="Telephone">
+							<em class="helper">e.g. +27 (21) 123 4567 x 45</em>
+						</div>
+					</div>
+					<div class="form_row">
+						<label for="inp_pwd">Password</label>
+						<input type="password" name="password" id="inp_pwd" placeholder="Password">
+					</div>
+					<div class="form_row optional">
+						<label for="inp_text_optional">Text <em>(Optional)</em></label>
+						<input type="text" name="text" id="inp_text_optional" placeholder="Text (Optional)" optional>
+					</div>
+					<div class="form_row disabled">
+						<label for="inp_text_disabled">Text</label>
+						<input type="text" name="text" id="inp_text_disabled" placeholder="Text" disabled>
+					</div>
+					<div class="form_row">
+						<label>Gender</label>
+						<ul>
+							<li><label for="inp_gender_m"><input type="radio" name="gender" value="m" id="inp_gender_m">&nbsp;Male</label></li>
+							<li><label for="inp_gender_f"><input type="radio" name="gender" value="f" id="inp_gender_f">&nbsp;Female</label></li>
+							<li><label for="inp_gender_un"><input type="radio" name="gender" value="un" id="inp_gender_un" checked>&nbsp;Undisclosed</label></li>
+						</ul>
+					</div>
+					<div class="form_row">
+						<label>Multiple choice</label>
+						<ul>
+							<li><label for="inp_answer_a" class="disabled"><input type="checkbox" name="answer" value="a" id="inp_answer_a" disabled>&nbsp;Any</label></li>
+							<li><label for="inp_answer_b"><input type="checkbox" name="answer" value="b" id="inp_answer_b">&nbsp;Both</label></li>
+							<li><label for="inp_answer_c"><input type="checkbox" name="answer" value="c" id="inp_answer_c" checked>&nbsp;None</label></li>
+							<li><label for="inp_answer_d"><input type="checkbox" name="answer" value="d" id="inp_answer_d" checked>&nbsp;All of the above</label></li>
+						</ul>
+					</div>
+					<div class="button_row">
+						<input type="submit" class="button primary" value="Submit">
+					</div>
+				</form>
+			</section>
 		</article>

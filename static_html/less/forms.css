@@ -1,0 +1,53 @@
+/* Form styles */
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="text"],
+input[type="password"],
+textarea {
+  border: #999 solid 1px;
+  -o-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #fafafa;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#ffffff));
+  background-image: -webkit-linear-gradient(top, #f5f5f5, #ffffff);
+  background-image: -moz-linear-gradient(top, #f5f5f5, #ffffff);
+  background-image: -ms-linear-gradient(top, #f5f5f5, #ffffff);
+  background-image: -o-linear-gradient(top, #f5f5f5, #ffffff);
+  background-image: linear-gradient(to bottom, #f5f5f5, #ffffff);
+  padding: 5px;
+}
+.form_row {
+  margin: 0 0 15px;
+}
+.form_row label.disabled {
+  color: #999;
+  text-decoration: line-through;
+}
+.form_row > label {
+  display: block;
+  color: #666;
+  font-weight: bold;
+}
+.form_row > .field > em.helper {
+  display: block;
+  color: #a4bfb3;
+  font-style: normal;
+  font-size: 11px;
+}
+.form_row > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.form_row.optional > label > em {
+  font-weight: normal;
+  font-style: normal;
+  color: #999;
+}
+.form_row.disabled {
+  -moz-opacity: 0.4;
+  opacity: 0.4;
+}

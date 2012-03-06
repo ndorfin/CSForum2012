@@ -2,7 +2,7 @@ CACHE MANIFEST
 
 CACHE:
 index.html
-static/css/cs_forum.css
+static/css/cs_forum.css?1
 
 NETWORK:
 *

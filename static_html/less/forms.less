@@ -1,0 +1,23 @@
+@import "lib.less";
+@colour_field_helper:#a4bfb3; // Same as: section heading secondary colour.
+
+/* Form styles */
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="text"],
+input[type="password"],
+textarea {border:#999 solid 1px; .border-radius(3px); background-color:#fafafa; .linear-gradient(#f5f5f5, #fff); padding:5px;}
+
+.form_row {margin:0 0 15px;
+	label.disabled {color:#999; text-decoration:line-through;}
+	> label {display:block; color:#666; font-weight:bold;}
+	> .field {
+		> em.helper {display:block; color:@colour_field_helper; font-style:normal; font-size:11px;}
+	}
+	> ul {.stripped_list();}
+	&.optional {
+		> label > em {font-weight:normal; font-style:normal; color:#999;}
+	}
+	&.disabled {.opacity(0.4);}
+}
