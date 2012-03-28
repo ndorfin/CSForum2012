@@ -19,9 +19,6 @@ wp_enqueue_script( 'twentyeleven-showcase', get_template_directory_uri() . '/js/
 
 get_header(); ?>
 
-		<div id="primary" class="showcase">
-			<div id="content" role="main">
-
 				<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php
@@ -215,8 +212,5 @@ get_header(); ?>
 
 					<?php endif; // end sidebar widget area ?>
 				</div><!-- .widget-area -->
-
-			</div><!-- #content -->
-		</div><!-- #primary -->
 
 <?php get_footer(); ?>

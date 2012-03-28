@@ -1,5 +1,3 @@
-= TWENTY ELEVEN =
+= CS Forum 2012 =
 
-* by the WordPress team, http://wordpress.org/
-
-== ABOUT TWENTY ELEVEN ==
+* Based on TWENTY ELEVEN by the WordPress team, http://wordpress.org/

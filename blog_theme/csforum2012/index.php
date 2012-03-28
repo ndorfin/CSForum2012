@@ -13,8 +13,10 @@
  */
 
 get_header(); ?>
-
-
+		<article>
+			<header>
+				<h1>Blog</h1>
+			</header>
 			<?php if ( have_posts() ) : ?>
 
 				<?php twentyeleven_content_nav( 'nav-above' ); ?>
@@ -22,7 +24,7 @@ get_header(); ?>
 				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php get_template_part( 'content', get_post_format() ); ?>
+					<?php get_template_part( 'content', 'intro' ); ?>
 
 				<?php endwhile; ?>
 
@@ -30,12 +32,12 @@ get_header(); ?>
 
 			<?php else : ?>
 
-				<article>
+		
 						<p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'twentyeleven' ); ?></p>
 						<?php get_search_form(); ?>
-				</article>
+
 
 			<?php endif; ?>
-
+		</article>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
