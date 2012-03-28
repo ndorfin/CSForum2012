@@ -32,6 +32,7 @@
 			echo ' | ' . sprintf( __( 'Page %s', 'twentyeleven' ), max( $paged, $page ) );
 
 		?></title>
+	<script src="<?php bloginfo('template_url'); ?>/js/html5.js"></script>
 	<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php
