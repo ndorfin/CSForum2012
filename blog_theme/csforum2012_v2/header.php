@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<title><?php wp_title(); ?> | <?php bloginfo( 'name' ); ?></title>
-	<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>">
+	<title><?php wp_title('|', true, "right"); ?><?php bloginfo('name'); ?></title>
+	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/csforum.css">
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
