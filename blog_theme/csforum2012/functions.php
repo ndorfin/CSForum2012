@@ -37,7 +37,7 @@
  * @subpackage Twenty_Eleven
  * @since Twenty Eleven 1.0
  */
-
+remove_filter( 'the_content', 'wpautop' );
 /**
  * Set the content width based on the theme's design and stylesheet.
  */

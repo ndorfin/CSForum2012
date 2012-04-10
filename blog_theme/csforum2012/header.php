@@ -32,7 +32,6 @@
 			echo ' | ' . sprintf( __( 'Page %s', 'twentyeleven' ), max( $paged, $page ) );
 
 		?></title>
-	<script src="<?php bloginfo('template_url'); ?>/js/html5.js"></script>
 	<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php
@@ -49,9 +48,12 @@
 		 */
 		wp_head();
 	?>
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 	<body <?php body_class(); ?>>
 		<header>
-			<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<nav id="site_menu">
 				<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assiged to the primary position is the one used. If none is assigned, the menu with the lowest ID is used. */ ?>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => false, 'items_wrap' => '<menu>%3$s</menu>' ) ); ?>

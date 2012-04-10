@@ -1,3 +1,17 @@
+/*
+Theme Name: CS Forum 2012 v2
+Theme URI: 
+Description: The Wordpress theme for CS Forum 2012
+Author: Shaun O'Connell
+Author URI: http://tactile.co.za
+Version: 0.2
+Tags: 
+
+License:
+License URI:
+
+Place any extra CSS (if needs be) in this file *
+*/
 a {
   color: #3d6a82;
 }
@@ -447,13 +461,4 @@ body > article > header figure + h1::after {
 }
 body > article > section {
   clear: both;
-}
-@media screen {
-  body {
-    margin-left: 0;
-  }
-  body > header {
-    position: static;
-    width: auto;
-  }
 }
