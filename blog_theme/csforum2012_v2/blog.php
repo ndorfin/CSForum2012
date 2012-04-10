@@ -6,7 +6,12 @@
 ?>
 		<article>
 			<header>
-				<h1>Blog</h1>
+				<?php if ( has_post_thumbnail() ) { ?>
+				<figure>
+					<?php the_post_thumbnail('related-post-thumbnail', array('title' => "", 'alt' => "", 'class' => "")); ?>
+				</figure>
+				<?php } ?>
+				<h1><?php the_title(); ?></h1>
 			</header>
 			<?php
 			global $post;
