@@ -30,6 +30,14 @@ html {height:100%; display:block; background-color:@colour_bg_html;}
 					}
 				}
 			}
+			body.single-post #site_menu a[href*="blog"],
+			body.single-post #site_menu a[href*="blog"]:hover {.size(112px, 20px); padding:8px 52px 8px 0; font-weight:normal; color:@colour_nav_active; background-color:@colour_bg_body; cursor:default; margin-left:36px;}
+			body.single-post #site_menu a[href*="blog"]::before,
+			body.single-post #site_menu a[href*="blog"]::after {position:absolute; left:-18px; .square(0); border-left:18px solid transparent; content:"";}
+			body.single-post #site_menu a[href*="blog"]::before {top:0; border-top:18px solid @colour_bg_body;}
+			body.single-post #site_menu a[href*="blog"]::after {bottom:0; border-bottom:18px solid @colour_bg_body;}
+
+			
 			#offsite_links {margin-top:25px;
 				> menu > li {margin:6px 0;
 					> a {color:@colour_font_default; display:block; .square(48px); .hide_text(); background-repeat:no-repeat; background-position:0 0; margin:0 auto;}
@@ -48,7 +56,7 @@ html {height:100%; display:block; background-color:@colour_bg_html;}
 				h1 {margin:20px;}
 				figure {.stripped(); max-height:455px; max-width:100%;}
 					img {max-height:455px; max-width:100%;}
-				figure + h1 {margin:0; background:@colour_bg_body; font-size:30px; font-weight:normal; position:absolute; bottom:50px; right:0; left:150px; padding:10px; line-height:1; color:#333; .opacity(); min-height:80px;
+				figure + h1 {margin:0; background:@colour_bg_body; font-size:30px; font-weight:normal; position:absolute; bottom:50px; right:0; left:150px; padding:10px; line-height:1; color:#333; .opacity(); min-height:40px;
 					span {color:@colour_font_accent; display:block;}
 				}
 				figure + h1::before,

@@ -362,6 +362,34 @@ body > header nav > p {
   bottom: 0;
   border-bottom: 18px solid #ffffff;
 }
+body.single-post #site_menu a[href*="blog"],
+body.single-post #site_menu a[href*="blog"]:hover {
+  width: 112px;
+  height: 20px;
+  padding: 8px 52px 8px 0;
+  font-weight: normal;
+  color: #a4bfb3;
+  background-color: #ffffff;
+  cursor: default;
+  margin-left: 36px;
+}
+body.single-post #site_menu a[href*="blog"]::before,
+body.single-post #site_menu a[href*="blog"]::after {
+  position: absolute;
+  left: -18px;
+  width: 0;
+  height: 0;
+  border-left: 18px solid transparent;
+  content: "";
+}
+body.single-post #site_menu a[href*="blog"]::before {
+  top: 0;
+  border-top: 18px solid #ffffff;
+}
+body.single-post #site_menu a[href*="blog"]::after {
+  bottom: 0;
+  border-bottom: 18px solid #ffffff;
+}
 #offsite_links {
   margin-top: 25px;
 }
@@ -433,7 +461,7 @@ body > article > header figure + h1 {
   color: #333;
   -moz-opacity: 0.8;
   opacity: 0.8;
-  min-height: 80px;
+  min-height: 40px;
 }
 body > article > header figure + h1 span {
   color: #d7ddb5;
